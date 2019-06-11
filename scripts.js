@@ -1,4 +1,9 @@
-const multiply = (a,b) => a*b;
+const average = (...args) => {
+ 	let sum = 0;
+  	args.forEach(arg => sum += arg); 
+  	console.log(sum/[...args].length);
+};
 
-console.log(multiply(2, 5));
-console.log(multiply(6, 6)); 
+average(1); // 1
+average(1, 3); // 2
+average(1, 3, 6, 6); // 4
